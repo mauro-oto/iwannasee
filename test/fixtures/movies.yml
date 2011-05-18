@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  cuevana: MyString
+  rating: 1.5
+  year: 1
+
+two:
+  title: MyString
+  cuevana: MyString
+  rating: 1.5
+  year: 1
