@@ -47,6 +47,11 @@ A
 	text-decoration: none;
 	outline: none;
 }
+#cuevana
+{
+	display: inline;
+	margin-left: 2%;
+}
 .clear
 {
 	clear: both;
@@ -55,7 +60,7 @@ A
 }
 #container
 {
-	width: 75%;
+	width: 64%;
 	margin: 20px auto;
 	background-color: #FFF;
 	padding: 20px 40px;
@@ -101,26 +106,21 @@ H2
 	padding-right: 10px;
 	display: inline;
 }
-#list
-{
-	list-style: none;
-}
 #list LI
 {
 	position: relative;
-	margin: 0 0 8px;
+	margin: 0 0 -34px -20px;
 	padding: 0 0 0 45px;
-	width: 607px;
+	width: 90%;
+	list-style: none;
 }
 #list LI SPAN
 {
 	padding: 8px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	width: 100%;
 	display: block;
 	position: relative;
-	margin: 0 0 0 -20px;
 }
 .colorBlue SPAN
 {

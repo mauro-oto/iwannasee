@@ -34,15 +34,14 @@ $(document).ready(function()
 
             <div id="control">
 
-			<div id="nuevapeli">
 			<%= render 'form' %>
-			</div>
+			
 			
 <% @movies.each do |movie| %>
 
 <ul id="list">
    <li class="colorRed">
-        <span><%= movie.title %></span>
+        <span><%= movie.title %><div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana</a></div></span>
         <div class="deletetab tab"><%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %></div>
     </li>
 </ul>

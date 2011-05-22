@@ -43,7 +43,24 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(params[:movie])
 	
-	peli = params[:movie][:title]
+	@peli = params[:movie][:title]
+	
+	@peli_y_anio = @peli.split(' (')
+
+	@anio = @peli_y_anio.last.chomp!(')').to_i if @peli_y_anio.last.include? ")"
+
+	@id_peli = YayImdbs.search_for_imdb_id(@peli, @anio)
+
+	@info_peli = YayImdbs.scrap_movie_info(@id_peli)
+	
+	@movie.rating = @info_peli[:rating]
+	
+	@movie.year = @info_peli[:year]
+	
+	peli_gsub = @peli.gsub(" ", "%20")
+	doc = Hpricot(open("http://www.google.com/search?q=site:cuevana.tv/peliculas%20#{peli_gsub}" ))
+	links = doc/"//a[@class=l]"
+	@movie.cuevana = links[0].attributes['href']
 	
     respond_to do |format|
       if @movie.save
