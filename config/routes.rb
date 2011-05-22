@@ -1,4 +1,5 @@
 Testapp::Application.routes.draw do
+
   resources :movies
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user

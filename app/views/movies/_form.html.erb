@@ -12,22 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :cuevana %><br />
-    <%= f.text_field :cuevana %>
-  </div>
-  <div class="field">
-    <%= f.label :rating %><br />
-    <%= f.text_field :rating %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.text_field :year %>
+    <%= f.text_field :title, :class => 'defaultText', :title => 'Fight Club' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit 'Add', :class => 'button' %>
+  </div> 
 <% end %>

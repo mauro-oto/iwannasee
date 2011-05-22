@@ -1,75 +1,263 @@
-body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+BODY
+{
+	background-color: #4B7399;
+	font-family: Verdana, Helvetica, Arial;
+	font-size: 14px;
 }
-
-a img {
-  border: none;
+UL#list LI SPAN INPUT[style]
+{
+	width: 90% !important;
 }
-
-a {
-  color: #0000FF;
+#movie_title
+{
+	width: 74%;
+	float: left;
+	margin: 0 10px 0 66px;
+	height: 35px;
+	font-size: 23px;
 }
-
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
+#movie_title:focus
+{
+	border-color: #73B8BF;
 }
-
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+.button:hover
+{
+	background-position: bottom left;
 }
-
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
+.button
+{
+	background: url(/images/button-bg.png) repeat-x;
+	-moz-border-radius: 5px;
+	padding: 6px 12px;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	text-shadow: 0 1px 1px #666;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0 1px 3px #999;
+	font: bold 16px Helvetica;
 }
-
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+#movie_submit
+{
+	padding: 10px 12px;
 }
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
+A
+{
+	color: #3838FE;
+	text-decoration: none;
+	outline: none;
 }
-
-.fieldWithErrors {
-  display: inline;
+.clear
+{
+	clear: both;
+	height: 0;
+	overflow: hidden;
 }
-
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px;
+#container
+{
+	width: 75%;
+	margin: 20px auto;
+	background-color: #FFF;
+	padding: 20px 40px;
+	border: 1px solid #000000;
+	position: relative;
 }
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
+#page-wrap
+{
+	width: 100%;
+	margin: 6px auto 10px;
+	position: relative;
 }
-
-.error_messages p {
-  margin: 8px 10px;
+.defaultText
+{
+	width: 300px;
 }
-
-.error_messages ul {
-  margin: 0;
+.defaultTextActive
+{
+	color: #A1A1A1;
+}
+H1
+{
+	word-spacing: 3pt;
+	font: bold 45px Helvetica, Sans-Serif;
+	margin: 0 0 10px;
+	text-indent: 66px;
+}
+#ryear
+{
+	padding-right: 50px;
+	display: inline;
+}
+P
+{
+	margin: 0 0 6px;
+}
+H2
+{
+	margin: 0 0 10px;
+}
+#rrating
+{
+	padding-right: 10px;
+	display: inline;
+}
+#list
+{
+	list-style: none;
+}
+#list LI
+{
+	position: relative;
+	margin: 0 0 8px;
+	padding: 0 0 0 45px;
+	width: 607px;
+}
+#list LI SPAN
+{
+	padding: 8px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 0 0 0 -20px;
+}
+.colorBlue SPAN
+{
+	background: rgb(115, 184, 191);
+}
+.colorYellow SPAN
+{
+	background: rgb(255, 255, 255);
+}
+.colorRed SPAN
+{
+	background: rgb(213, 221, 230);
+	color: #000000;
+}
+.colorGreen SPAN
+{
+	background: rgb(145, 191, 75);
+}
+.tab
+{
+	height: 21px;
+	top: 4px;
+}
+.deletetab
+{
+	position: absolute;
+	right: 45px;
+	width: 15px;
+	background-position: -82px 0;
+	cursor: pointer;
+	top: 8px;
+}
+.deletetab:hover
+{
+	background-position: -82px -21px;
+}
+.buttonSeen
+{
+	-moz-border-radius: 10px;
+	padding: 1px;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	text-shadow: 0 1px 1px #666;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px #999;
+	font: bold 16px Helvetica;
+	background: url(/images/button-bg.png) repeat-x;
+	margin: -4px 0 0;
+}
+.crossout
+{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 1px;
+}
+#control
+{
+	width: 100%;
+	padding: 10px 0 0;
+	text-align: left;
+}
+.actions
+{
+	margin-bottom: 35px;
+}
+.red
+{
+	background: #FF0000;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 3px;
+}
+#rcuevana
+{
+	padding-right: 10px;
+	display: inline;
+}
+#rtitle
+{
+	display: inline;
+	padding-right: 100px;
+}
+#flash_notice, #flash_error, #flash_alert
+{
+	padding: 5px 8px;
+	margin: 10px 0;
+}
+#flash_notice
+{
+	background-color: #CFC;
+	border: 1px solid #6C6;
+}
+#flash_error, #flash_alert
+{
+	background-color: #FCC;
+	border: 1px solid #C66;
+}
+.fieldWithErrors
+{
+	display: inline;
+}
+.error_messages
+{
+	width: 400px;
+	border: 2px solid #CF0000;
+	padding: 0px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #F0F0F0;
+	font-size: 12px;
+}
+.error_messages H2
+{
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 10px;
+	font-size: 12px;
+	margin: 0;
+	background-color: #C00;
+	color: #FFF;
+}
+.error_messages P
+{
+	margin: 8px 10px;
+}
+.error_messages UL
+{
+	margin: 0;
+}
+HR
+{
+	height: 1px;
+	background: #CCC;
+	clear: both;
+	margin: 20px 0;
+	border: none;
+	display: block;
 }

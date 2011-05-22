@@ -1,29 +1,57 @@
-<h1>Listing movies</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Cuevana</th>
-    <th>Rating</th>
-    <th>Year</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
+<script language="javascript">
+<!--
+$(document).ready(function()
+{
+    $(".defaultText").focus(function(srcc)
+    {
+        if ($(this).val() == $(this)[0].title)
+        {
+            $(this).removeClass("defaultTextActive");
+            $(this).val("");
+        }
+    });
+    
+    $(".defaultText").blur(function()
+    {
+        if ($(this).val() == "")
+        {
+            $(this).addClass("defaultTextActive");
+            $(this).val($(this)[0].title);
+        }
+    });
+    
+    $(".defaultText").blur();        
+});
+//-->
+</script>
+
+<div id="page-wrap">
+
+<h1>I'd Like To See</h1>
+
+            <div id="control">
+
+			<div id="nuevapeli">
+			<%= render 'form' %>
+			</div>
+			
 <% @movies.each do |movie| %>
-  <tr>
-    <td><%= movie.title %></td>
-    <td><%= movie.cuevana %></td>
-    <td><%= movie.rating %></td>
-    <td><%= movie.year %></td>
-    <td><%= link_to 'Show', movie %></td>
-    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-    <td><%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+
+<ul id="list">
+   <li class="colorRed">
+        <span><%= movie.title %></span>
+        <div class="deletetab tab"><%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %></div>
+    </li>
+</ul>
+
+
 
 <br />
 
-<%= link_to 'New Movie', new_movie_path %>
+<% end %>
+
+</div>
+</div>

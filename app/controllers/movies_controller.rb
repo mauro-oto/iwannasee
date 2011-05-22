@@ -3,11 +3,12 @@ class MoviesController < ApplicationController
   # GET /movies.xml
   def index
     @movies = Movie.all
-
+	@movie = Movie.new
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @movies }
-    end
+	  
+	end
   end
 
   # GET /movies/1
@@ -41,10 +42,12 @@ class MoviesController < ApplicationController
   # POST /movies.xml
   def create
     @movie = Movie.new(params[:movie])
-
+	
+	peli = params[:movie][:title]
+	
     respond_to do |format|
       if @movie.save
-        format.html { redirect_to(@movie, :notice => 'Movie was successfully created.') }
+        format.html { redirect_to(movies_path, :notice => 'Movie was successfully added.') }
         format.xml  { render :xml => @movie, :status => :created, :location => @movie }
       else
         format.html { render :action => "new" }
@@ -52,7 +55,7 @@ class MoviesController < ApplicationController
       end
     end
   end
-
+  
   # PUT /movies/1
   # PUT /movies/1.xml
   def update
@@ -76,7 +79,7 @@ class MoviesController < ApplicationController
     @movie.destroy
 
     respond_to do |format|
-      format.html { redirect_to(movies_url) }
+      format.html { redirect_to(movies_url, :notice => 'Movie was marked as seen.') }
       format.xml  { head :ok }
     end
   end

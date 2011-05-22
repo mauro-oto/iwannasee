@@ -33,6 +33,7 @@ GEM
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    hpricot (0.8.4)
     i18n (0.5.0)
     mail (2.2.19)
       activesupport (>= 2.3.6)
@@ -42,6 +43,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.12)
     nifty-generators (0.4.6)
+    nokogiri (1.4.4.1-x86-mingw32)
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.14)
@@ -67,13 +69,19 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
+    yayimdbs (0.2.2)
+      activesupport
+      i18n
+      nokogiri (>= 1.4.2)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby
+  hpricot
   mocha
   nifty-generators
   rails (= 3.0.7)
   sqlite3
+  yayimdbs
