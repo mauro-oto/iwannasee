@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'yayimdbs'
 gem 'hpricot'
 gem 'nifty-generators'
+gem 'acts_as_list'
+gem "will_paginate", :git => "http://github.com/mislav/will_paginate.git", :branch => "rails3"
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,6 +1,6 @@
 Testapp::Application.routes.draw do
 
-  resources :movies
+  resources :movies 
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
@@ -14,7 +14,7 @@ Testapp::Application.routes.draw do
 
   resources :users
 
-  root :to => "home#index"
+  root :to => "movies#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

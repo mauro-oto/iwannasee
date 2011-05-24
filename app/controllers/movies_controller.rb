@@ -2,15 +2,16 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.xml
   def index
-    @movies = Movie.all
+	@movies = Movie.all.paginate(:page => params[:page], :per_page => 12)
 	@movie = Movie.new
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @movies }
 	  
 	end
   end
-
+  
   # GET /movies/1
   # GET /movies/1.xml
   def show
@@ -44,23 +45,21 @@ class MoviesController < ApplicationController
     @movie = Movie.new(params[:movie])
 	
 	@peli = params[:movie][:title]
-	
 	@peli_y_anio = @peli.split(' (')
-
 	@anio = @peli_y_anio.last.chomp!(')').to_i if @peli_y_anio.last.include? ")"
 
 	@id_peli = YayImdbs.search_for_imdb_id(@peli, @anio)
-
 	@info_peli = YayImdbs.scrap_movie_info(@id_peli)
 	
 	@movie.rating = @info_peli[:rating]
-	
 	@movie.year = @info_peli[:year]
+	@movie.small_image = @info_peli[:small_image]
+	@movie.title = @peli_y_anio.first.titleize
 	
 	peli_gsub = @peli.gsub(" ", "%20")
 	doc = Hpricot(open("http://www.google.com/search?q=site:cuevana.tv/peliculas%20#{peli_gsub}" ))
 	links = doc/"//a[@class=l]"
-	@movie.cuevana = links[0].attributes['href']
+	@movie.cuevana = links[0].attributes['href'] if not links.empty?
 	
     respond_to do |format|
       if @movie.save

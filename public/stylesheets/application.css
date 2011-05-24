@@ -1,8 +1,8 @@
 BODY
 {
-	background-color: #4B7399;
+	background-color: #1E2428;
 	font-family: Verdana, Helvetica, Arial;
-	font-size: 14px;
+	font-size: 0.84em;
 }
 UL#list LI SPAN INPUT[style]
 {
@@ -50,7 +50,12 @@ A
 #cuevana
 {
 	display: inline;
+}
+#cuevana
+{
+	display: inline;
 	margin-left: 2%;
+	border-bottom: thin dotted #3737F5;
 }
 .clear
 {
@@ -83,33 +88,15 @@ A
 }
 H1
 {
-	word-spacing: 3pt;
-	font: bold 45px Helvetica, Sans-Serif;
-	margin: 0 0 10px;
+	margin: 9px 0 10px;
 	text-indent: 66px;
-}
-#ryear
-{
-	padding-right: 50px;
-	display: inline;
-}
-P
-{
-	margin: 0 0 6px;
-}
-H2
-{
-	margin: 0 0 10px;
-}
-#rrating
-{
-	padding-right: 10px;
-	display: inline;
+	font: normal bold 44px/1.2em Helvetica, Arial, sans-serif;
+	letter-spacing: -2px;
 }
 #list LI
 {
 	position: relative;
-	margin: 0 0 -34px -20px;
+	margin: 0 0 -35px -20px;
 	padding: 0 0 0 45px;
 	width: 90%;
 	list-style: none;
@@ -121,6 +108,21 @@ H2
 	-webkit-border-radius: 5px;
 	display: block;
 	position: relative;
+	float: none;
+}
+A IMG
+{
+	display: none;
+}
+#title
+{
+	display: inline;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+#year
+{
+	display: inline;
 }
 .colorBlue SPAN
 {
@@ -160,7 +162,7 @@ H2
 .buttonSeen
 {
 	-moz-border-radius: 10px;
-	padding: 1px;
+	padding: 1px 5px 1px 4px;
 	border: none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -184,9 +186,15 @@ H2
 	padding: 10px 0 0;
 	text-align: left;
 }
-.actions
+#aviso
 {
-	margin-bottom: 35px;
+	font: italic 0.7em Helvetica, Arial, sans-serif;
+	margin: 2px 0 30px 66px;
+}
+.pagination
+{
+	margin: 40px 0 0;
+	text-align: center;
 }
 .red
 {
@@ -194,16 +202,6 @@ H2
 	color: #FFFFFF;
 	font-size: 12px;
 	padding: 3px;
-}
-#rcuevana
-{
-	padding-right: 10px;
-	display: inline;
-}
-#rtitle
-{
-	display: inline;
-	padding-right: 100px;
 }
 #flash_notice, #flash_error, #flash_alert
 {
@@ -260,4 +258,9 @@ HR
 	margin: 20px 0;
 	border: none;
 	display: block;
+}
+.resize
+{
+	width: auto;
+	height: 32px;
 }
