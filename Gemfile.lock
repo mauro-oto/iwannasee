@@ -98,6 +98,7 @@ DEPENDENCIES
   mocha
   nifty-generators
   rails (= 3.0.7)
+  rake (= 0.8.7)
   sqlite3
   will_paginate!
   yayimdbs

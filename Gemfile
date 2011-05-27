@@ -13,6 +13,7 @@ gem 'acts_as_list'
 gem "will_paginate", :git => "http://github.com/mislav/will_paginate.git", :branch => "rails3"
 gem 'cancan'
 gem 'authlogic'
+gem 'rake', '0.8.7'
 
 # Use unicorn as the web server
 # gem 'unicorn'
