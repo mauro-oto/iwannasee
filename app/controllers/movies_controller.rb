@@ -1,8 +1,9 @@
 class MoviesController < ApplicationController
+before_filter :login_required
   # GET /movies
   # GET /movies.xml
   def index
-	@movies = Movie.all.paginate(:page => params[:page], :per_page => 12)
+	@movies = current_user.movies.paginate(:page => params[:page], :per_page => 12)
 	@movie = Movie.new
 	
     respond_to do |format|
@@ -43,6 +44,7 @@ class MoviesController < ApplicationController
   # POST /movies.xml
   def create
     @movie = Movie.new(params[:movie])
+	@movie.user = current_user
 	
 	@peli = params[:movie][:title]
 	@peli_y_anio = @peli.split(' (')

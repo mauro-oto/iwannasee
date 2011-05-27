@@ -1,5 +1,11 @@
 Testapp::Application.routes.draw do
 
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  match 'login' => 'user_sessions#new', :as => :login
+
+  resources :user_sessions
+
   resources :movies 
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user

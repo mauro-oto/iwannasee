@@ -20,8 +20,14 @@ module ControllerAuthentication
     controller.send :helper_method, :current_user, :logged_in?, :redirect_to_target_or_default
   end
 
+  def current_user_session
+    return @current_user_session if defined?(@current_user_session)
+    @current_user_session = UserSession.find
+  end
+
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    return @current_user if defined?(@current_user)
+    @current_user = current_user_session && current_user_session.record
   end
 
   def logged_in?

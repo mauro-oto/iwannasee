@@ -11,6 +11,8 @@ gem 'hpricot'
 gem 'nifty-generators'
 gem 'acts_as_list'
 gem "will_paginate", :git => "http://github.com/mislav/will_paginate.git", :branch => "rails3"
+gem 'cancan'
+gem 'authlogic'
 
 # Use unicorn as the web server
 # gem 'unicorn'
