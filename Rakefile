@@ -5,7 +5,7 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 
-module ::testapp
+module ::Testapp
   class Application
     include Rake::DSL
   end
