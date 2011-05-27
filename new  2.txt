@@ -1,0 +1,16 @@
+p.tutInfo{
+	padding:10px 0;
+	text-align:center;
+	position:fixed;
+	bottom:0px;
+	background:#121b21;
+	border-top:1px solid black;
+	width:100%;
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
+<img src=" <%= movie.small_image %>" class="resize"></img>
+
+
+<a class="thumbnail" href="#thumb">Zoka Coffee<span><img src="media/zoka.gif" /><br />Zoka Coffee</span></a>
+
+    <span><div id="title"><%= movie.title %></div><div id="year"><%= movie.year %></div><div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana (Stream)</a></div></span>
