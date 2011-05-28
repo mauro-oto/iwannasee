@@ -1,4 +1,5 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="fancyzoom.js"></script>
 <script type="text/javascript">
 $(document).ready(function()
 {
@@ -51,7 +52,9 @@ $(document).ready(function()
 
 <ul id="list">
    <li class="colorRed">
-         <span><div id="title"><%= movie.title %></div><div id="year"><%= movie.year %></div>
+         <span>
+		 <div id="poster"><img src="<%= movie.small_image %>"></img></div>
+		 <div id="title"><%= movie.title %></div><div id="year"><%= movie.year %></div>
 		 <div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana (Stream)</a></div></span>
         <div class="deletetab tab"><%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %></div>
     </li>

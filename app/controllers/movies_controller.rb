@@ -55,7 +55,7 @@ before_filter :login_required
 	
 	@movie.rating = @info_peli[:rating]
 	@movie.year = @info_peli[:year]
-	@movie.small_image = @info_peli[:small_image]
+	@movie.small_image = @info_peli[:large_image]
 	@movie.title = @peli_y_anio.first.titleize
 	
 	peli_gsub = @peli.gsub(" ", "%20")
