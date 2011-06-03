@@ -1,12 +1,9 @@
 BODY
 {
-	background-color: #1E2428;
+	background-color: #27313B;
 	font-family: Verdana, Helvetica, Arial;
 	font-size: 0.84em;
-}
-UL#list LI SPAN INPUT[style]
-{
-	width: 90% !important;
+	min-width: 850px;
 }
 #movie_title
 {
@@ -23,18 +20,19 @@ UL#list LI SPAN INPUT[style]
 .button:hover
 {
 	background-position: bottom left;
+	background: #94ACC6;
 }
 .button
 {
-	background: url(/images/button-bg.png) repeat-x;
+	background: #7E9DBF;
 	-moz-border-radius: 5px;
 	padding: 6px 12px;
 	border: none;
 	color: #FFFFFF;
 	cursor: pointer;
-	text-shadow: 0 1px 1px #666;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 1px 2px 1px #FFF;
 	-webkit-border-radius: 5px;
-	-webkit-box-shadow: 0 1px 3px #999;
 	font: bold 16px Helvetica;
 }
 #movie_submit
@@ -43,19 +41,25 @@ UL#list LI SPAN INPUT[style]
 }
 A
 {
-	color: #3838FE;
+	color: #27313B;
 	text-decoration: none;
 	outline: none;
 }
-#cuevana
+#welcome A
+{
+	border-bottom: 1px dotted #27313B;
+}
+#imdb
 {
 	display: inline;
+	border-bottom: thin dotted #27313B;
+	margin-left: 2%;
 }
 #cuevana
 {
 	display: inline;
 	margin-left: 2%;
-	border-bottom: thin dotted #3737F5;
+	border-bottom: thin dotted #27313B;
 }
 .clear
 {
@@ -78,6 +82,10 @@ A
 	margin: 6px auto 10px;
 	position: relative;
 }
+#welcome
+{
+	font-size: 0.72em;
+}
 .defaultText
 {
 	width: 300px;
@@ -90,8 +98,9 @@ H1
 {
 	margin: 9px 0 10px;
 	text-indent: 66px;
-	font: normal bold 44px/1.2em Helvetica, Arial, sans-serif;
+	font: normal bold 3.4em/1.2em Helvetica, Arial, sans-serif;
 	letter-spacing: -2px;
+	color: #7E9DBF;
 }
 #list LI
 {
@@ -109,10 +118,6 @@ H1
 	display: block;
 	position: relative;
 	float: none;
-}
-A IMG
-{
-	display: none;
 }
 #title
 {
@@ -141,26 +146,11 @@ A IMG
 {
 	background: rgb(145, 191, 75);
 }
-.tab
-{
-	height: 21px;
-	top: 4px;
-}
-.deletetab
-{
-	position: absolute;
-	right: 45px;
-	width: 15px;
-	background-position: -82px 0;
-	cursor: pointer;
-	top: 8px;
-}
-.deletetab:hover
-{
-	background-position: -82px -21px;
-}
 .buttonSeen
 {
+	position: absolute;
+	right: 2%;
+	top: 8px;
 	-moz-border-radius: 10px;
 	padding: 1px 5px 1px 4px;
 	border: none;
@@ -170,7 +160,7 @@ A IMG
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: 0 1px 3px #999;
 	font: bold 16px Helvetica;
-	background: url(/images/button-bg.png) repeat-x;
+	background: #7E9DBF;
 	margin: -4px 0 0;
 }
 .crossout
@@ -263,4 +253,8 @@ HR
 {
 	width: auto;
 	height: 32px;
+}
+.buttonSeen:hover
+{
+	background: #94ACC6;
 }

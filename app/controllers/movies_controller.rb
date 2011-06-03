@@ -55,8 +55,9 @@ before_filter :login_required
 	
 	@movie.rating = @info_peli[:rating]
 	@movie.year = @info_peli[:year]
-	@movie.small_image = @info_peli[:large_image]
+	@movie.small_image = @info_peli[:large_image]	
 	@movie.title = @peli_y_anio.first.titleize
+	@movie.link_imdb = "http://www.imdb.com/title/tt#{@info_peli[:imdb_id]}"
 	
 	peli_gsub = @peli.gsub(" ", "%20")
 	doc = Hpricot(open("http://www.google.com/search?q=site:cuevana.tv/peliculas%20#{peli_gsub}" ))

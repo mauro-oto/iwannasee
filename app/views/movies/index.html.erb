@@ -1,5 +1,5 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="fancyzoom.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function()
 {
@@ -26,13 +26,11 @@ $(document).ready(function()
 
 </script>
 
-
-
 <div id="page-wrap">
 
  <% if logged_in? %>
-        Welcome <%= current_user.username %>! Not you?
-        <%= link_to "Log out", logout_path %>
+        <div id="welcome">Welcome <%= current_user.username %>! Not you?
+        <%= link_to "Log out", logout_path %></div>
       <% else %>
         <%= link_to "Sign up", signup_path %> or
         <%= link_to "log in", login_path %>.
@@ -48,15 +46,20 @@ $(document).ready(function()
 			</div>
 
 
+<% if @movies.empty? %>
+<h2>Add a movie to get started!</h2>
+<% end %>
+
 <% @movies.each do |movie| %>
 
 <ul id="list">
    <li class="colorRed">
          <span>
-		 <div id="poster"><img src="<%= movie.small_image %>"></img></div>
 		 <div id="title"><%= movie.title %></div><div id="year"><%= movie.year %></div>
-		 <div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana (Stream)</a></div></span>
-        <div class="deletetab tab"><%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %></div>
+		 <div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana (Stream)</a></div>
+		 <div id="imdb"><a href="<%= movie.link_imdb %>">IMDB</a></div>
+		 <%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %>
+		 </span>
     </li>
 </ul>
 

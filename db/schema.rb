@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110527190232) do
+ActiveRecord::Schema.define(:version => 20110603014246) do
 
   create_table "movies", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20110527190232) do
     t.string   "small_image"
     t.integer  "position"
     t.integer  "user_id"
+    t.string   "link_imdb"
   end
 
   create_table "users", :force => true do |t|
