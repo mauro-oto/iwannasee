@@ -1,7 +1,11 @@
-Testapp::Application.routes.draw do  resources :user_sessions
+Testapp::Application.routes.draw do 
+
+ resources :user_sessions
 
   resources :movies 
-
+  
+  post "movies/sort", :to => "movies#sort"
+  
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   match 'signup' => 'users#new', :as => :signup
@@ -13,6 +17,8 @@ Testapp::Application.routes.draw do  resources :user_sessions
   resources :sessions
 
   resources :users
+  
+  match '/:username' => 'users#show', :as => :user
 
   root :to => "movies#index"
   

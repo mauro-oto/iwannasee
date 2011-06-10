@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     return user if user && user.password_hash == user.encrypt_password(pass)
   end
 
+  def to_param
+  username
+  end
+  
   def encrypt_password(pass)
     BCrypt::Engine.hash_secret(pass, password_salt)
   end

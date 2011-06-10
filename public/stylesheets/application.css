@@ -41,6 +41,7 @@ BODY
 }
 A
 {
+	border-bottom: 1px dotted #27313B;
 	color: #27313B;
 	text-decoration: none;
 	outline: none;
@@ -96,21 +97,21 @@ A
 }
 H1
 {
-	margin: 9px 0 10px;
+	margin: 9px 0 0;
 	text-indent: 66px;
 	font: normal bold 3.4em/1.2em Helvetica, Arial, sans-serif;
 	letter-spacing: -2px;
 	color: #7E9DBF;
 }
-#list LI
+#movies LI
 {
 	position: relative;
 	margin: 0 0 -35px -20px;
 	padding: 0 0 0 45px;
-	width: 90%;
+	width: 87%;
 	list-style: none;
 }
-#list LI SPAN
+#movies LI SPAN
 {
 	padding: 8px;
 	-moz-border-radius: 5px;
@@ -118,6 +119,7 @@ H1
 	display: block;
 	position: relative;
 	float: none;
+	margin: 30px 0 0;
 }
 #title
 {
@@ -175,6 +177,10 @@ H1
 	width: 100%;
 	padding: 10px 0 0;
 	text-align: left;
+}
+#publiclink
+{
+	margin: 2px 0 0;
 }
 #aviso
 {

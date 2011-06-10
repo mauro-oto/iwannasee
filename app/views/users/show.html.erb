@@ -1,31 +1,12 @@
-
 <div id="page-wrap">
-
- <% if logged_in? %>
-        <div id="welcome">Welcome <%= current_user.username %>! Not you?
-        <%= link_to "Log out", logout_path %>
-		<div id="publiclink">
-        [<a href="http://iwannasee.heroku.com/<%= current_user.username %>">Your Public Link</a>]
-        </div>
-		</div>
-      <% else %>
-        <%= link_to "Sign up", signup_path %> or
-        <%= link_to "log in", login_path %>.
-      <% end %>
 	  
-
-	  
-<h1>I Wanna See</h1>
+<h1><%= @user.username %>'s List</h1>
 
             <div id="control">
 
-			<%= render 'form' %>
-			<div id="aviso">
-			You can specify the movie's year if needed, i.e.: Scarface (1983)
-			</div>	
 			
 <% if @movies.empty? %>
-<h2>Add a movie to get started!</h2>
+<h2>No movies to show!</h2>
 <% end %>
 
 <ul id="movies">
@@ -43,7 +24,6 @@
 		 <div id="year"><%= movie.year %></div>
 		 <div id="cuevana"><a href="<%= movie.cuevana %>">Cuevana (Stream)</a></div>
 		 <div id="imdb"><a href="<%= movie.link_imdb %>">IMDB</a></div>
-		 <%= button_to 'Seen', movie, :class => 'buttonSeen', :method => :delete %>
 		 </span>
     </li>
 
@@ -59,6 +39,7 @@
 <div id="pagination">
 <%= will_paginate @movies, :page_links => false %>
 </div>
+
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :login_required, :except => [:new, :create]
+  before_filter :login_required, :only => [:edit, :update]
 
   def new
     @user = User.new
@@ -17,6 +17,11 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+  end
+  
+  def show
+	@user = User.find_by_username(params[:username])
+	@movies = @user.movies.paginate(:page => params[:page], :per_page => 12)
   end
 
   def update

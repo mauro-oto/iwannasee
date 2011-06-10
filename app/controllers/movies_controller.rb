@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-before_filter :login_required
+before_filter :login_required, :except => [:show]
   # GET /movies
   # GET /movies.xml
   def index
@@ -90,7 +90,17 @@ before_filter :login_required
       end
     end
   end
-
+  
+def sort
+@movies = Movie.all
+@movies.each do |movie|
+movie.position = params['movie'].index(movie.id.to_s) + 1
+movie.save
+end
+render :nothing => true
+end
+  
+  
   # DELETE /movies/1
   # DELETE /movies/1.xml
   def destroy
