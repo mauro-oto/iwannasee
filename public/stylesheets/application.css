@@ -46,6 +46,11 @@ A
 	text-decoration: none;
 	outline: none;
 }
+#csstabs A
+{
+	border-bottom: hidden;
+	padding: 7px 5px 7px 1px;
+}
 #welcome A
 {
 	border-bottom: 1px dotted #27313B;
@@ -177,6 +182,29 @@ H1
 	width: 100%;
 	padding: 10px 0 0;
 	text-align: left;
+}
+#csstabs
+{
+	border: 1px dotted;
+	padding: 7px;
+	width: 194px;
+	margin-left: 35%;
+	margin-bottom: -20px;
+	background: rgb(213, 221, 230) url(;);
+	margin-top: -20px;
+	cursor: pointer;
+}
+#tab2
+{
+	display: inline;
+	padding: 7px 0 9px 1px;
+}
+#tab1
+{
+	display: inline;
+	margin-right: 15px;
+	border-right: 1px dotted;
+	padding: inherit;
 }
 #publiclink
 {

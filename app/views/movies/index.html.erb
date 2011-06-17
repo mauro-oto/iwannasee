@@ -23,6 +23,14 @@
 			<div id="aviso">
 			You can specify the movie's year if needed, i.e.: Scarface (1983)
 			</div>	
+			<div id="csstabs">
+			<div id="tab1">
+			<%= link_to "Watchlist", movies_path %>
+			</div>
+			<div id="tab2">
+			<a href="#">Movies Seen</a>
+			</div>
+			</div>
 			
 <% if @movies.empty? %>
 <h2>Add a movie to get started!</h2>
