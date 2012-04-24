@@ -22,7 +22,3 @@ You can test using the following:
 
 >Username: test2
 >Password: asdasd
-
-## Hungry Academy
-
-These bits of code were uploaded for my application to the Hungry Academy program.
