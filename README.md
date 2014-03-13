@@ -4,10 +4,6 @@
 
 In addition to that, movies you enter will be searched in Cuevana, a popular Argentinian streaming website, and provide a link.
 
-I wrote this app because I wanted to have a movie to-do with streaming links.
-
-I can say I'm proud of it because a few close friends have used it in the past.
-
 ## Usage
 
 You can find the demo [here](http://iwannasee.heroku.com)
